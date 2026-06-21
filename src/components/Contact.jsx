@@ -28,9 +28,9 @@ const Contact = () => {
 
             <div className="space-y-6">
               {[
-                { icon: Mail, text: 'sameer.dev@example.com', label: 'Email' },
-                { icon: Phone, text: '+1 234 567 890', label: 'Phone' },
-                { icon: MapPin, text: 'New York, USA', label: 'Location' }
+                { icon: Mail, text: 'sameermasih778@gmail.com', label: 'Email' },
+                { icon: Phone, text: '+92 318451994', label: 'Phone' },
+                { icon: MapPin, text: 'Islamabad, Pakistan', label: 'Location' }
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-4 group">
                   <div className="p-4 rounded-xl bg-slate-100 dark:bg-slate-800/50 group-hover:bg-cyan-500/20 transition-colors text-cyan-600 dark:text-cyan-400">
