@@ -60,7 +60,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-slate-600 dark:text-slate-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors text-l font-medium tracking-wide relative group"
+              className="text-slate-600 dark:text-slate-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors text-l font-semibold tracking-wide relative group"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-500 dark:bg-cyan-400 transition-all group-hover:w-full" />
