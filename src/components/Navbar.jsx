@@ -39,7 +39,9 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'glass py-4' : 'bg-transparent py-6'
+        scrolled
+          ? 'bg-white dark:bg-slate-950 border-b border-slate-200/60 dark:border-slate-800/60 shadow-sm py-4'
+          : 'bg-white dark:bg-slate-950 border-b border-slate-200/60 dark:border-slate-800/60 py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center relative z-50">
@@ -47,7 +49,7 @@ const Navbar = () => {
           <div className="p-2 bg-gradient-to-tr from-cyan-500 to-purple-500 rounded-lg group-hover:rotate-12 transition-transform">
             <Code2 className="w-6 h-6 text-white" />
           </div>
-          <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 dark:from-cyan-400 dark:to-purple-400">
+          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 dark:from-cyan-400 dark:to-purple-400">
             Sameer<span className="text-slate-800 dark:text-white"> Masih</span>
           </span>
         </a>
@@ -58,7 +60,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-slate-600 dark:text-slate-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors text-sm font-medium tracking-wide relative group"
+              className="text-slate-600 dark:text-slate-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors text-l font-medium tracking-wide relative group"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-500 dark:bg-cyan-400 transition-all group-hover:w-full" />

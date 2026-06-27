@@ -17,7 +17,7 @@ const Hero = () => {
           className="space-y-4 md:space-y-6 order-2 md:order-1 flex flex-col items-center md:items-start text-center md:text-left"
         >
           <span className="px-4 py-2 rounded-full glass text-cyan-600 dark:text-cyan-400 text-sm font-medium border-cyan-500/30 inline-block text-xl font-bold">
-            Frontend Developer
+          Software Engineer  |  Web Developer
           </span>
           <h1 className="text-4xl md:text-7xl font-bold leading-tight text-slate-900 dark:text-white">
             Hi, I'm <br />
@@ -26,8 +26,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="text-slate-600 dark:text-slate-400 text-lg max-w-lg leading-relaxed text-xl">
-            I'm an aspiring web developer passionate about creating beautiful and responsive websites. 
-            Turning ideas into reality using modern web technologies.
+            I'm a Software Engineer passionate about building modern, responsive, and scalable web applications. I enjoy turning ideas into high-quality digital products through clean code and thoughtful design.
           </p>
           
           <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-2 md:pt-4">
