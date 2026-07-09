@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
-import ProfileImg from '../assets/Profile.jpg';
+import ProfileImg from '../assets/Profile.png';
 import Resume from '../assets/Resume.pdf';
 
 const Hero = () => {
