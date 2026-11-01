@@ -19,11 +19,11 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="bg-slate-50 dark:bg-slate-950 min-h-screen text-slate-900 dark:text-slate-200 selection:bg-cyan-500 selection:text-white transition-colors duration-300 relative">
-        {/* Dynamic Top Scroll Progress Line */}
+      <div className="bg-white dark:bg-black min-h-screen text-zinc-900 dark:text-zinc-200 selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-300 relative">
+        {/* Vercel Crisp Laser Scroll Line */}
         <motion.div
           style={{ scaleX }}
-          className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 origin-left z-[100]"
+          className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-zinc-400 via-zinc-900 to-zinc-400 dark:from-zinc-600 dark:via-white dark:to-zinc-500 origin-left z-[100]"
         />
         
         <Navbar />

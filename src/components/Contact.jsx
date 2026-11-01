@@ -31,27 +31,27 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 relative overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
-      <div className="absolute top-[-10%] right-[-5%] w-72 sm:w-96 h-72 sm:h-96 bg-purple-500/10 dark:bg-purple-600/20 rounded-full blur-[100px] sm:blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] left-[-5%] w-72 sm:w-96 h-72 sm:h-96 bg-cyan-500/10 dark:bg-cyan-600/20 rounded-full blur-[100px] sm:blur-[120px] pointer-events-none" />
+    <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
+      <div className="absolute top-[-10%] right-[-5%] w-72 sm:w-96 h-72 sm:h-96 bg-zinc-300/10 dark:bg-zinc-800/15 rounded-full blur-[100px] sm:blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] left-[-5%] w-72 sm:w-96 h-72 sm:h-96 bg-zinc-400/10 dark:bg-zinc-800/15 rounded-full blur-[100px] sm:blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
-          <span className="text-cyan-600 dark:text-cyan-400 font-semibold tracking-wider uppercase mb-2 text-xs sm:text-sm font-mono flex items-center gap-1.5">
+          <span className="text-zinc-600 dark:text-zinc-400 font-semibold tracking-wider uppercase mb-2 text-xs sm:text-sm font-mono flex items-center gap-1.5">
             <Sparkles size={16} /> Get In Touch
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-white">
             Let's Build Something <span className="text-gradient">Extraordinary</span>
           </h2>
-          <p className="mt-3 text-slate-600 dark:text-slate-400 max-w-xl text-xs sm:text-sm md:text-base">
+          <p className="mt-3 text-zinc-600 dark:text-zinc-400 max-w-xl text-xs sm:text-sm md:text-base">
             Have a project in mind, an open full-time role, or an interesting engineering challenge? I'd love to connect.
           </p>
-          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mt-4" />
+          <div className="w-16 sm:w-20 h-1 bg-zinc-900 dark:bg-white rounded-full mt-4" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-10 glass-card p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-slate-900/50">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-10 glass-card p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl border border-zinc-200/90 dark:border-white/[0.08] bg-zinc-50/70 dark:bg-zinc-950/70">
           
           {/* Left Column: Direct Info */}
           <motion.div 
@@ -61,26 +61,26 @@ const Contact = () => {
             className="space-y-6 sm:space-y-8 flex flex-col justify-between"
           >
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 sm:mb-3">
+              <h3 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white mb-2 sm:mb-3">
                 Let's Talk About Your Next Initiative
               </h3>
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-xs sm:text-sm md:text-base">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-xs sm:text-sm md:text-base">
                 I'm open to discussing full-time software engineering roles, hybrid opportunities in Islamabad/Rawalpindi, and global remote contracts.
               </p>
             </div>
 
             <div className="space-y-3.5 sm:space-y-5">
               {/* Email with 1-Click Copy */}
-              <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/80 dark:border-white/5 group">
+              <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-white/[0.06] group">
                 <div className="flex items-center gap-3 sm:gap-4 min-w-0">
-                  <div className="p-2.5 sm:p-3 rounded-xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 shrink-0">
+                  <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white shrink-0">
                     <Mail size={20} className="sm:w-5 sm:h-5" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Email Address</p>
+                    <p className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Email Address</p>
                     <a 
                       href="mailto:sameermasih778@gmail.com"
-                      className="text-slate-900 dark:text-slate-100 font-semibold text-xs sm:text-base hover:text-cyan-500 transition-colors truncate block"
+                      className="text-zinc-900 dark:text-zinc-100 font-semibold text-xs sm:text-base hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors truncate block"
                     >
                       sameermasih778@gmail.com
                     </a>
@@ -88,7 +88,7 @@ const Contact = () => {
                 </div>
                 <button
                   onClick={handleCopyEmail}
-                  className="p-2 sm:p-2.5 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-700/80 text-slate-600 dark:text-slate-300 transition-all cursor-pointer text-xs flex items-center gap-1.5 shrink-0 ml-2"
+                  className="p-2 sm:p-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-300 transition-all cursor-pointer text-xs flex items-center gap-1.5 shrink-0 ml-2 shadow-sm"
                   title="Copy email to clipboard"
                 >
                   {copied ? (
@@ -106,15 +106,15 @@ const Contact = () => {
               </div>
 
               {/* Phone */}
-              <div className="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/80 dark:border-white/5">
-                <div className="p-2.5 sm:p-3 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 shrink-0">
+              <div className="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-white/[0.06]">
+                <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white shrink-0">
                   <Phone size={20} className="sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Phone / WhatsApp</p>
+                  <p className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Phone / WhatsApp</p>
                   <a 
                     href="tel:+923184519994"
-                    className="text-slate-900 dark:text-slate-100 font-semibold text-xs sm:text-base hover:text-cyan-500 transition-colors"
+                    className="text-zinc-900 dark:text-zinc-100 font-semibold text-xs sm:text-base hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"
                   >
                     +92 318 4519994
                   </a>
@@ -122,21 +122,21 @@ const Contact = () => {
               </div>
 
               {/* Location */}
-              <div className="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/80 dark:border-white/5">
-                <div className="p-2.5 sm:p-3 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 shrink-0">
+              <div className="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-white/[0.06]">
+                <div className="p-2.5 sm:p-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white shrink-0">
                   <MapPin size={20} className="sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Location & Timezone</p>
-                  <p className="text-slate-900 dark:text-slate-100 font-semibold text-xs sm:text-base">
+                  <p className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Location & Timezone</p>
+                  <p className="text-zinc-900 dark:text-zinc-100 font-semibold text-xs sm:text-base">
                     Islamabad, Pakistan (UTC+5)
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-400 text-xs sm:text-sm font-medium flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+            <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-100 dark:bg-zinc-900/60 border border-zinc-300 dark:border-white/[0.08] text-zinc-700 dark:text-zinc-300 text-xs sm:text-sm font-medium flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-zinc-900 dark:bg-white animate-pulse shrink-0"></span>
               Fast response turnaround guaranteed (under 24 hours).
             </div>
           </motion.div>
@@ -146,72 +146,72 @@ const Contact = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-slate-50 dark:bg-slate-800/30 p-5 sm:p-8 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-white/5"
+            className="bg-white dark:bg-zinc-900/50 p-5 sm:p-8 rounded-xl sm:rounded-2xl border border-zinc-200/80 dark:border-white/[0.06]"
           >
             <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                 <div>
-                  <label className="block text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 mb-1">Your Name</label>
+                  <label className="block text-[11px] font-mono font-medium text-zinc-600 dark:text-zinc-400 mb-1">Your Name</label>
                   <input 
                     type="text" 
                     required
                     placeholder="John Doe" 
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-white dark:bg-slate-900/60 border border-slate-300 dark:border-slate-700 rounded-xl px-3.5 py-2.5 sm:py-3 text-slate-900 dark:text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors placeholder:text-slate-400 shadow-sm" 
+                    className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 rounded-xl px-3.5 py-2.5 sm:py-3 text-zinc-900 dark:text-zinc-200 text-xs sm:text-sm focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors placeholder:text-zinc-400 shadow-sm" 
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 mb-1">Email Address</label>
+                  <label className="block text-[11px] font-mono font-medium text-zinc-600 dark:text-zinc-400 mb-1">Email Address</label>
                   <input 
                     type="email" 
                     required
                     placeholder="john@example.com" 
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-white dark:bg-slate-900/60 border border-slate-300 dark:border-slate-700 rounded-xl px-3.5 py-2.5 sm:py-3 text-slate-900 dark:text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors placeholder:text-slate-400 shadow-sm" 
+                    className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 rounded-xl px-3.5 py-2.5 sm:py-3 text-zinc-900 dark:text-zinc-200 text-xs sm:text-sm focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors placeholder:text-zinc-400 shadow-sm" 
                   />
                 </div>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                 <div>
-                  <label className="block text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 mb-1">Phone (Optional)</label>
+                  <label className="block text-[11px] font-mono font-medium text-zinc-600 dark:text-zinc-400 mb-1">Phone (Optional)</label>
                   <input 
                     type="text" 
                     placeholder="+92 300 0000000" 
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-white dark:bg-slate-900/60 border border-slate-300 dark:border-slate-700 rounded-xl px-3.5 py-2.5 sm:py-3 text-slate-900 dark:text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors placeholder:text-slate-400 shadow-sm" 
+                    className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 rounded-xl px-3.5 py-2.5 sm:py-3 text-zinc-900 dark:text-zinc-200 text-xs sm:text-sm focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors placeholder:text-zinc-400 shadow-sm" 
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 mb-1">Subject</label>
+                  <label className="block text-[11px] font-mono font-medium text-zinc-600 dark:text-zinc-400 mb-1">Subject</label>
                   <input 
                     type="text" 
                     placeholder="Opportunity / Inquiry" 
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full bg-white dark:bg-slate-900/60 border border-slate-300 dark:border-slate-700 rounded-xl px-3.5 py-2.5 sm:py-3 text-slate-900 dark:text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors placeholder:text-slate-400 shadow-sm" 
+                    className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 rounded-xl px-3.5 py-2.5 sm:py-3 text-zinc-900 dark:text-zinc-200 text-xs sm:text-sm focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors placeholder:text-zinc-400 shadow-sm" 
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 mb-1">Message</label>
+                <label className="block text-[11px] font-mono font-medium text-zinc-600 dark:text-zinc-400 mb-1">Message</label>
                 <textarea 
                   rows="4" 
                   required
                   placeholder="Tell me about your project, timeline, or open opportunity..." 
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-white dark:bg-slate-900/60 border border-slate-300 dark:border-slate-700 rounded-xl px-3.5 py-2.5 sm:py-3 text-slate-900 dark:text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors resize-none placeholder:text-slate-400 shadow-sm"
+                  className="w-full bg-zinc-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 rounded-xl px-3.5 py-2.5 sm:py-3 text-zinc-900 dark:text-zinc-200 text-xs sm:text-sm focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors resize-none placeholder:text-zinc-400 shadow-sm"
                 ></textarea>
               </div>
               
               <button 
                 type="submit"
-                className="w-full py-3 sm:py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex justify-center items-center gap-2 cursor-pointer text-xs sm:text-base"
+                className="w-full py-3 sm:py-3.5 rounded-xl bg-black hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-black font-semibold shadow-md transition-all flex justify-center items-center gap-2 cursor-pointer text-xs sm:text-base"
               >
                 <span>Send Message</span>
                 <Send size={16} />
