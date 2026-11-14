@@ -141,14 +141,14 @@ const Navbar = () => {
           <div className="flex items-center gap-1.5 md:hidden flex-shrink-0">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300"
+              className="p-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 active:scale-90 transition-transform cursor-pointer"
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
             </button>
             <button
               onClick={() => setIsOpen(true)}
-              className="p-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300"
+              className="p-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 active:scale-90 transition-transform cursor-pointer"
               aria-label="Open Menu"
             >
               <Menu size={18} />
@@ -157,8 +157,7 @@ const Navbar = () => {
         </div>
       </header>
 
-      {/* ════════════════════ MOBILE DRAWER OVERLAY ════════════════════ */}
-      {/* Rendered OUTSIDE the header so it's never clipped by header layout */}
+      {/* ════════════════════ INSTANT MOBILE BOTTOM DRAWER ════════════════════ */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -166,19 +165,19 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.12 }}
             className="fixed inset-0 z-[200] flex flex-col justify-end md:hidden"
             style={{ backgroundColor: 'rgba(0,0,0,0.65)' }}
             onClick={closeDrawer}
           >
-            {/* Sheet panel — slides up from bottom */}
+            {/* Sheet panel — slides up from bottom INSTANTLY */}
             <motion.div
               key="drawer-panel"
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
-              transition={{ type: 'spring', damping: 32, stiffness: 320 }}
-              className="w-full bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-white/10 shadow-2xl rounded-t-3xl"
+              transition={{ duration: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="w-full bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-white/10 shadow-2xl rounded-t-3xl will-change-transform"
               style={{ maxHeight: '90vh', overflowY: 'auto' }}
               onClick={(e) => e.stopPropagation()}
             >
@@ -209,7 +208,8 @@ const Navbar = () => {
                   </div>
                   <button
                     onClick={closeDrawer}
-                    className="p-2 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 flex-shrink-0"
+                    className="p-2 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 flex-shrink-0 active:scale-90 transition-transform cursor-pointer"
+                    aria-label="Close Menu"
                   >
                     <X size={17} />
                   </button>
