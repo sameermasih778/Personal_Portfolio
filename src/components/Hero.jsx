@@ -5,7 +5,7 @@ import Resume from '../assets/Resume.pdf';
 
 const Hero = () => {
   const stats = [
-    { value: '10+', label: 'Projects Built' },
+    { value: '6+', label: 'Projects Built' },
     { value: 'Full-Stack', label: 'Web Applications' },
     { value: 'Clean Code', label: 'Architecture & UI' },
     { value: '100%', label: 'Responsive Design' },
