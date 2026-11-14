@@ -1,76 +1,112 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, Github, Sparkles } from 'lucide-react';
-import SupremaImg from '../assets/suprema.png';
-import FaceCraftImg from '../assets/facecraft.png';
-import Project1 from '../assets/1.png';
-import Project2 from '../assets/2.png';
-import Project3 from '../assets/3.png';
-import Project4 from '../assets/4.png';
+import { ArrowUpRight, Github, Sparkles, CheckCircle2, Cpu, ExternalLink } from 'lucide-react';
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const categories = ['All', 'Full-Stack', 'Frontend & SaaS', 'E-Commerce'];
+  const categories = ['All', 'Full-Stack', 'Computer Vision & AI', 'Frontend & SaaS'];
 
   const projects = [
     { 
       title: 'Suprema — Task Management SaaS', 
+      domain: 'Full-Stack SaaS & Cloud Systems',
+      subtitle: 'Production SaaS Platform (Khawaja Labs)',
       category: 'Full-Stack',
-      tag: 'Featured Flagship',
-      img: SupremaImg, 
-      desc: 'Full-stack task management SaaS with drag-and-drop Kanban, workspaces, analytics dashboards, and JWT/RBAC secured APIs.',
-      tags: ['React.js', 'Node.js', 'PostgreSQL', 'Supabase', 'Tailwind'],
+      highlights: 'Drag-and-Drop Kanban • JWT & RBAC Auth • Burndown Analytics',
+      desc: 'Enterprise-grade task management and sprint orchestration platform featuring multi-tenant workspaces, drag-and-drop Kanban sprint boards, productivity analytics dashboards, and role-guarded REST APIs.',
+      bullets: [
+        'Architected interactive Kanban sprint boards with optimistic UI updates and fluid drag-and-drop task state management.',
+        'Engineered secure Node.js & Express RESTful API micro-services fortified with JWT authentication and strict Role-Based Access Control (RBAC).',
+        'Designed normalized relational database schemas on PostgreSQL and Supabase with foreign-key constraints and query indexing.',
+        'Implemented role-based analytics dashboards tracking team velocity, milestone burndown charts, and automated activity audit logging.'
+      ],
+      tags: ['React.js', 'Node.js', 'PostgreSQL', 'Supabase', 'Express.js', 'Tailwind CSS', 'JWT Auth', 'REST APIs'],
       liveUrl: 'https://sameer-personal-portfolio-699.vercel.app',
       githubUrl: 'https://github.com/sameermasih778'
     },
     { 
-      title: 'FaceCraft — AI Grooming Assistant', 
-      category: 'Full-Stack',
-      tag: 'AI Integrated',
-      img: FaceCraftImg, 
-      desc: 'AI-assisted grooming web app analyzing facial geometry to recommend customized hair styles, beard cuts, and skincare products.',
-      tags: ['React.js', 'Node.js', 'Express', 'MySQL', 'REST APIs'],
+      title: 'Face-Craft & Grooming AI', 
+      domain: 'Computer Vision & Full Stack',
+      subtitle: 'Final Year Capstone Project',
+      category: 'Computer Vision & AI',
+      highlights: '468+ facial landmarks • Sub-second inference • Full auth & payment pipeline',
+      desc: 'An intelligent web application that performs real-time facial landmark analysis, facial shape detection, personalized grooming and cosmetic product recommendations, and AI-powered virtual try-on.',
+      bullets: [
+        'Integrated MediaPipe Face Mesh for 468+ 3D facial landmarks and trained Random Forest classifiers for face-shape detection (round, oval, oblong, heart).',
+        'Applied MTCNN-based computer vision for skin analysis detecting acne, pores, wrinkles, and skin tone variations.',
+        'Implemented virtual try-on modules for hairstyles and beard styles, paired with an intelligent conversational AI advisor.',
+        'Architected complete web platform with authentication, MySQL database, role-based admin panel, notifications, and subscription workflows.'
+      ],
+      tags: ['MediaPipe', 'Python', 'MTCNN', 'Random Forest', 'React.js', 'Node.js', 'MySQL', 'Tailwind CSS'],
       liveUrl: 'https://sameer-personal-portfolio-699.vercel.app',
       githubUrl: 'https://github.com/sameermasih778'
     },
     { 
       title: 'Food Delivery Web App', 
+      domain: 'Full-Stack & E-Commerce Engineering',
+      subtitle: 'End-to-End MERN Stack Architecture',
       category: 'Full-Stack',
-      tag: 'MERN Stack',
-      img: Project1, 
-      desc: 'Full-stack food ordering platform with customer storefront, cart, Stripe checkout integration, and live admin management dashboard.',
-      tags: ['React.js', 'Node.js', 'MongoDB', 'Stripe', 'JWT Auth'],
+      highlights: 'Stripe Checkout • Real-time Order Tracking • Atomic Cart Management',
+      desc: 'Full-scale food ordering and logistics platform with customer storefront, interactive cart state management, Stripe payment processing, and real-time vendor order fulfillment dashboard.',
+      bullets: [
+        'Built end-to-end MERN stack application with MongoDB document schemas, Mongoose models, and atomic cart operations.',
+        'Integrated Stripe Payment Gateway with webhook listener for secure transactional processing and automated invoice generation.',
+        'Developed responsive real-time order tracking dashboard with automated status transitions (Received, Preparing, Dispatched).',
+        'Implemented secure JWT session management, input validation, and password encryption using bcrypt.'
+      ],
+      tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Stripe API', 'Tailwind CSS', 'JWT Auth', 'REST APIs'],
       liveUrl: 'https://sameer-personal-portfolio-699.vercel.app',
       githubUrl: 'https://github.com/sameermasih778'
     },
     { 
       title: 'ShopEase — E-Commerce Storefront', 
-      category: 'E-Commerce',
-      tag: 'Storefront',
-      img: Project2, 
-      desc: 'Responsive seven-page e-commerce storefront with dynamic product catalog, interactive cart counter, feedback toasts, and checkout.',
-      tags: ['JavaScript', 'Tailwind CSS', 'HTML5', 'Responsive UI'],
+      domain: 'Frontend Architecture & Performance',
+      subtitle: 'Multi-Page Commercial Storefront',
+      category: 'Frontend & SaaS',
+      highlights: '7-Page Responsive Storefront • Client-side Cart State • Optimized Web Vitals',
+      desc: 'High-performance, multi-page commercial storefront featuring dynamic catalog browsing, instant cart counter calculations, customer feedback toasts, and streamlined checkout UX.',
+      bullets: [
+        'Constructed modular, reusable UI component hierarchy using semantic HTML5, modern ES6+ JavaScript, and Tailwind CSS.',
+        'Implemented robust client-side state handling for product quantity counters, active discount calculations, and persistent cart state.',
+        'Integrated dynamic filtering by category, price ranges, and customer ratings with instant DOM updates.',
+        'Optimized core web vitals and mobile touch targets for sub-second page loads across all device form factors.'
+      ],
+      tags: ['JavaScript (ES6+)', 'Tailwind CSS', 'HTML5', 'Responsive Design', 'DOM API', 'State Management'],
       liveUrl: 'https://sameer-personal-portfolio-699.vercel.app',
       githubUrl: 'https://github.com/sameermasih778'
     },
     { 
       title: 'Car Rental Booking Platform', 
+      domain: 'Web Platform & Booking Systems',
+      subtitle: 'Automotive Booking Solution',
       category: 'Frontend & SaaS',
-      tag: 'Web Platform',
-      img: Project4, 
-      desc: 'Automotive booking website featuring vehicle catalog filtering, reservation scheduling workflows, and inquiry channels.',
-      tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Web'],
+      highlights: 'Fleet Catalog Filtering • Date Validation Workflows • Direct Inquiry Channels',
+      desc: 'Automotive booking website featuring interactive vehicle fleet browsing, specification filtering, reservation date scheduling workflows, and direct customer inquiry channels.',
+      bullets: [
+        'Designed modular catalog viewing with dynamic vehicle specifications, pricing matrices, and transmission filters.',
+        'Implemented date range validation workflows preventing double bookings and validating user scheduling constraints.',
+        'Structured clean form state validation with real-time field error messaging and direct inquiry dispatch integration.',
+        'Applied responsive glassmorphic cards and mobile-first responsive grid layouts.'
+      ],
+      tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Web', 'Form Validation', 'UI Architecture'],
       liveUrl: 'https://sameer-personal-portfolio-699.vercel.app',
       githubUrl: 'https://github.com/sameermasih778'
     },
     { 
-      title: 'Personal Portfolio & Showcase', 
+      title: 'Personal Portfolio & Architecture Showcase', 
+      domain: 'Frontend Systems & Physics UI',
+      subtitle: 'Developer Portfolio & Brand Identity',
       category: 'Frontend & SaaS',
-      tag: 'Portfolio',
-      img: Project3, 
-      desc: 'High-performance developer portfolio featuring custom Bento grids, dynamic dark/light theme switching, and fluid spring physics.',
-      tags: ['React 19', 'Tailwind v4', 'Framer Motion', 'Vite'],
+      highlights: 'Fluid Spring Physics • Dark/Light Mode Engine • 100% Responsive Bento Grids',
+      desc: 'High-performance developer portfolio featuring custom Bento grid architecture, dynamic theme switching engine, spring physics, and zero-layout-shift responsive performance.',
+      bullets: [
+        'Engineered floating glass capsule navbar with reactive scroll spy and spring pill animations via Framer Motion.',
+        'Implemented theme persistence engine with zero-flash localStorage detection and system dark/light synchronization.',
+        'Built custom SVG branding favicon and responsive mobile bottom-sheet navigation.',
+        'Optimized asset bundling and production build pipeline via Vite 7, Tailwind v4, and tree-shaken Lucide icons.'
+      ],
+      tags: ['React 19', 'Vite 7', 'Tailwind v4', 'Framer Motion', 'Lucide Icons', 'Context API'],
       liveUrl: 'https://sameer-personal-portfolio-699.vercel.app',
       githubUrl: 'https://github.com/sameermasih778'
     },
@@ -97,7 +133,7 @@ const Projects = () => {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="mt-3 text-zinc-600 dark:text-zinc-400 max-w-xl text-xs sm:text-sm md:text-base">
-            Compact showcase of full-stack web applications, SaaS platforms, and responsive interfaces.
+            Detailed engineering breakdown of full-stack web applications, AI platforms, and cloud systems.
           </p>
           <div className="w-16 h-1 bg-zinc-900 dark:bg-white rounded-full mt-3.5" />
         </div>
@@ -110,7 +146,7 @@ const Projects = () => {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`relative px-3.5 sm:px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
+                className={`relative px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
                   isActive
                     ? 'text-white dark:text-black shadow-sm'
                     : 'text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white bg-white dark:bg-zinc-900/80 border border-zinc-200 dark:border-white/10'
@@ -129,10 +165,10 @@ const Projects = () => {
           })}
         </div>
 
-        {/* Compact, Professional 3-Column Studio Grid */}
+        {/* Technical Specification Engineering Cards Grid (2-Column Studio Grid) */}
         <motion.div 
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8"
         >
           <AnimatePresence>
             {filteredProjects.map((project) => (
@@ -144,7 +180,7 @@ const Projects = () => {
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.25 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="group relative rounded-2xl bg-white dark:bg-zinc-950/70 border border-zinc-200/90 dark:border-white/[0.08] hover:border-zinc-400 dark:hover:border-white/25 backdrop-blur-xl transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/60 flex flex-col justify-between overflow-hidden"
+                className="group relative rounded-2xl sm:rounded-3xl bg-white dark:bg-zinc-950/70 border border-zinc-200/90 dark:border-white/[0.08] hover:border-zinc-400 dark:hover:border-white/25 backdrop-blur-xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/60 overflow-hidden"
               >
                 {/* Top Subtle Hover Accent Line */}
                 <div 
@@ -152,88 +188,90 @@ const Projects = () => {
                 />
 
                 <div>
-                  {/* Compact Screenshot Preview Frame */}
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block relative h-44 sm:h-48 overflow-hidden bg-zinc-950 border-b border-zinc-100 dark:border-white/[0.06] cursor-pointer"
-                  >
-                    <img 
-                      src={project.img} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
-                    />
-                    
-                    {/* Dark gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
-
-                    {/* Tag Badge */}
-                    <span className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md text-[10px] font-mono font-semibold bg-black/80 text-zinc-200 backdrop-blur-md border border-white/15 shadow-sm">
-                      {project.tag}
+                  {/* 1. Domain Badge */}
+                  <div className="mb-3.5">
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-mono font-medium border border-zinc-200 dark:border-white/10 bg-zinc-100 dark:bg-zinc-900/80 text-zinc-700 dark:text-zinc-300">
+                      {project.domain}
                     </span>
-                  </a>
+                  </div>
 
-                  {/* Compact Body Content */}
-                  <div className="p-4 sm:p-5">
-                    {/* Category */}
-                    <span className="text-[10px] font-mono font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block mb-1">
-                      {project.category}
-                    </span>
+                  {/* 2. Highlights / Metrics strip */}
+                  <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-white/5 mb-5 text-[11px] sm:text-xs font-mono text-zinc-600 dark:text-zinc-400">
+                    <Cpu size={15} className="text-zinc-900 dark:text-white shrink-0" />
+                    <span className="truncate">{project.highlights}</span>
+                  </div>
 
-                    {/* Title */}
-                    <h3 className="text-sm sm:text-base font-bold text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors line-clamp-1 mb-1.5">
+                  {/* 3. Title & Subtitle */}
+                  <div className="mb-3">
+                    <h3 className="text-xl sm:text-2xl font-bold font-display text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
                       {project.title}
                     </h3>
-
-                    {/* Description */}
-                    <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 mb-3">
-                      {project.desc}
+                    <p className="text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 font-mono mt-0.5">
+                      {project.subtitle}
                     </p>
+                  </div>
 
-                    {/* Compact Tech Badges */}
-                    <div className="flex flex-wrap gap-1.5">
-                      {project.tags.slice(0, 4).map((tag, idx) => (
-                        <span 
-                          key={idx}
-                          className="px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-900/80 border border-zinc-200/70 dark:border-white/[0.06] text-[10px] font-mono text-zinc-700 dark:text-zinc-300"
-                        >
-                          {tag}
-                        </span>
+                  {/* 4. Description */}
+                  <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed mb-6">
+                    {project.desc}
+                  </p>
+
+                  {/* 5. TECHNICAL IMPLEMENTATION: */}
+                  <div className="mb-6">
+                    <span className="text-[11px] font-mono font-bold tracking-wider text-zinc-500 dark:text-zinc-400 uppercase block mb-3">
+                      TECHNICAL IMPLEMENTATION:
+                    </span>
+                    <ul className="space-y-2.5">
+                      {project.bullets.map((bullet, bIdx) => (
+                        <li key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-[13px] text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                          <CheckCircle2 size={16} className="text-zinc-400 dark:text-zinc-500 shrink-0 mt-0.5 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
+                          <span>{bullet}</span>
+                        </li>
                       ))}
-                      {project.tags.length > 4 && (
-                        <span className="px-1.5 py-0.5 rounded-md text-[10px] font-mono text-zinc-400">
-                          +{project.tags.length - 4}
-                        </span>
-                      )}
-                    </div>
+                    </ul>
                   </div>
                 </div>
 
-                {/* Compact, Professional Button Bar */}
-                <div className="px-4 sm:px-5 pb-4 sm:pb-5 pt-0">
-                  <div className="pt-3 border-t border-zinc-100 dark:border-white/5 flex items-center gap-2">
-                    {/* Live Demo Button */}
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-black hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-black text-xs font-semibold shadow-sm transition-all duration-200 cursor-pointer group/live"
-                    >
-                      <span>Live Demo</span>
-                      <ArrowUpRight size={13} className="transition-transform group-hover/live:translate-x-0.5 group-hover/live:-translate-y-0.5" />
-                    </a>
+                <div>
+                  {/* 6. Tech Tags */}
+                  <div className="flex flex-wrap gap-1.5 pt-4 border-t border-zinc-100 dark:border-white/5 mb-5">
+                    {project.tags.map((tag, tIdx) => (
+                      <span 
+                        key={tIdx}
+                        className="px-2.5 py-1 rounded-md bg-zinc-100 dark:bg-zinc-900/80 border border-zinc-200/80 dark:border-white/[0.08] text-[11px] font-mono text-zinc-700 dark:text-zinc-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-                    {/* Source Code Button */}
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl border border-zinc-300 dark:border-white/10 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-800 dark:text-zinc-200 text-xs font-medium transition-all duration-200 cursor-pointer"
-                    >
-                      <Github size={13} />
-                      <span>Source</span>
-                    </a>
+                  {/* 7. Footer: Verified Project + Action Links */}
+                  <div className="flex items-center justify-between text-xs pt-1 border-t border-zinc-100 dark:border-white/5">
+                    <span className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 font-mono text-[11px]">
+                      <Sparkles size={13} className="text-zinc-900 dark:text-white" />
+                      Verified Project
+                    </span>
+
+                    <div className="flex items-center gap-3">
+                      <a 
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors cursor-pointer"
+                      >
+                        <Github size={14} />
+                        <span>Source</span>
+                      </a>
+                      <a 
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 font-semibold text-zinc-900 dark:text-white hover:underline cursor-pointer"
+                      >
+                        
+                        <ArrowUpRight size={14} />
+                      </a>
+                    </div>
                   </div>
                 </div>
 
